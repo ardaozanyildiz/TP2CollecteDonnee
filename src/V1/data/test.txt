@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "title": "Inception",
+    "genre": "Science-fiction",
+    "year": 2010,
+    "rating": 5,
+    "userId": "1",
+    "duration": 148,
+    "watched": false
+  },
+  {
+    "id": "2",
+    "title": "Tenet",
+    "genre": "Drama",
+    "year": 2020,
+    "rating": 4,
+    "userId": "2",
+    "duration": 150,
+    "watched": false
+  },
+  {
+    "id": "3",
+    "title": "Interstellar",
+    "genre": "Science-fiction",
+    "year": 2014,
+    "rating": 5,
+    "userId": "1",
+    "duration": 169,
+    "watched": true
+  }
+]
+

@@ -1,0 +1,76 @@
+# 1) Register (admin)
+curl -s -X POST http://localhost:3000/api/v2/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "admin@example.com",
+    "username": "AdminUser",
+    "password": "Adm1n!Passw0rd_2024",
+    "role": "admin"
+  }'
+
+# 2) Register (user)
+curl -s -X POST http://localhost:3000/api/v2/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "user@example.com",
+    "username": "UserOne",
+    "password": "Str0ng!Passw0rd_2024",
+    "role": "user"
+  }'
+
+# 3) Login (récupère un JWT)
+curl -s -X POST http://localhost:3000/api/v2/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "admin@example.com",
+    "password": "Adm1n!Passw0rd_2024"
+  }'
+# 4) GET /users/me (nécessite Authorization: Bearer <TOKEN>)
+curl -s -X GET http://localhost:3000/api/v2/users/me \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <TOKEN>"
+
+# 5) PATCH /users/me (mise à jour profil basique)
+curl -s -X PATCH http://localhost:3000/api/v2/users/me \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <TOKEN>" \
+  -d '{
+    "username": "AdminUserUpdated"
+  }'
+
+# 6) GET /users/:id (admin requis)
+curl -s -X GET http://localhost:3000/api/v2/users/<USER_ID> \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ADMIN_TOKEN>"
+# 7) GET /movies (liste, filtres possibles selon ton modèle)
+curl -s -X GET "http://localhost:3000/api/v2/movies" \
+  -H "Content-Type: application/json"
+
+# 8) POST /movies (admin requis)
+curl -s -X POST http://localhost:3000/api/v2/movies \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  -d '{
+    "title": "Inception",
+    "year": 2010,
+    "genres": ["Sci-Fi", "Thriller"],
+    "director": "Christopher Nolan",
+    "duration": 148
+  }'
+
+# 9) GET /movies/:id
+curl -s -X GET http://localhost:3000/api/v2/movies/<MOVIE_ID> \
+  -H "Content-Type: application/json"
+
+# 10) PATCH /movies/:id (admin requis)
+curl -s -X PATCH http://localhost:3000/api/v2/movies/<MOVIE_ID> \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ADMIN_TOKEN>" \
+  -d '{
+    "title": "Inception (Director'\''s Cut)"
+  }'
+
+# 11) DELETE /movies/:id (admin requis)
+curl -s -X DELETE http://localhost:3000/api/v2/movies/<MOVIE_ID> \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <ADMIN_TOKEN>"

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "1",
+    "type": "film",
+    "title": "Inception",
+    "genre": "Science-fiction",
+    "year": 2010,
+    "rating": 5,
+    "userId": "1",
+    "duration": 148,
+    "watched": true
+  },
+  {
+    "id": "2",
+    "type": "film",
+    "title": "Tenet",
+    "genre": "Action",
+    "year": 2020,
+    "rating": 4,
+    "userId": "2",
+    "duration": 150,
+    "watched": false
+  },
+  {
+    "id": "3",
+    "type": "serie",
+    "title": "Breaking Bad",
+    "genre": "Drama",
+    "year": 2008,
+    "rating": 5,
+    "userId": "1",
+    "status": "terminee",
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "releaseDate": "2008-01-20T00:00:00.000Z",
+        "episodes": [
+          {
+            "id": "1",
+            "title": "Pilot",
+            "duration": 58,
+            "episodeNumber": 1,
+            "watched": true
+          },
+          {
+            "id": "2",
+            "title": "Cat's in the Bag...",
+            "duration": 48,
+            "episodeNumber": 2,
+            "watched": false
+          }
+        ]
+      },
+      {
+        "seasonNumber": 2,
+        "releaseDate": "2009-03-08T00:00:00.000Z",
+        "episodes": [
+          {
+            "id": "3",
+            "title": "Seven Thirty-Seven",
+            "duration": 47,
+            "episodeNumber": 1,
+            "watched": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "type": "serie",
+    "title": "Stranger Things",
+    "genre": "Science-fiction",
+    "year": 2016,
+    "rating": 4,
+    "userId": "2",
+    "status": "en_cours",
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "releaseDate": "2016-07-15T00:00:00.000Z",
+        "episodes": [
+          {
+            "id": "1",
+            "title": "The Vanishing of Will Byers",
+            "duration": 49,
+            "episodeNumber": 1,
+            "watched": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "type": "serie",
+    "title": "Normal People",
+    "genre": "Drama",
+    "year": 2020,
+    "rating": 4,
+    "userId": "1",
+    "status": "terminee",
+    "seasons": []
+  },
+  {
+    "id": "6",
+    "title": "Interstellar",
+    "genre": "Science-fiction",
+    "year": 2014,
+    "rating": 5,
+    "userId": "1",
+    "duration": 169,
+    "watched": false
+  }
+]

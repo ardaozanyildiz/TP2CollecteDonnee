@@ -1,0 +1,1912 @@
+{
+	"info": {
+		"_postman_id": "f9497393-9a38-41f1-ba7f-86684d0b7857",
+		"name": "TV_TRACKER_ARDA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44461378",
+		"_collection_link": "https://tarek-4292426.postman.co/workspace/Tarek-'s-Workspace~dbca0264-a703-4c05-8546-638b4976a738/collection/44461378-f9497393-9a38-41f1-ba7f-86684d0b7857?action=share&source=collection_link&creator=44461378"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user1@example.com\",\r\n  \"username\": \"user1\",\r\n  \"password\": \"Password123!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/auth/register",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user1@example.com\",\r\n  \"username\": \"user1\",\r\n  \"password\": \"Password123!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/auth/register",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c4-UqQiG7ruxUK32OxosJRfPuEoaME\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:04:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"user1@example.com\",\n    \"username\": \"user1\",\n    \"role\": \"user\",\n    \"favorites\": [],\n    \"_id\": \"6904de1dac0e275cc9f866f2\",\n    \"createdAt\": \"2025-10-31T16:04:45.905Z\",\n    \"updatedAt\": \"2025-10-31T16:04:45.905Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin1@example.com\",\r\n  \"username\": \"admin1\",\r\n  \"password\": \"Password123!\",\r\n  \"role\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/auth/register",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin1@example.com\",\r\n  \"username\": \"admin1\",\r\n  \"password\": \"Password123!\",\r\n  \"role\" : \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/auth/register",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "198"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c6-RoOgLdMidTcyf2DELbxl1XxSS5w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:10:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"admin1@example.com\",\n    \"username\": \"admin1\",\n    \"role\": \"user\",\n    \"favorites\": [],\n    \"_id\": \"6904df92ac0e275cc9f866f8\",\n    \"createdAt\": \"2025-10-31T16:10:58.891Z\",\n    \"updatedAt\": \"2025-10-31T16:10:58.891Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user1@example.com\",\r\n  \"password\": \"Password123!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/auth/login",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user1@example.com\",\r\n  \"password\": \"Password123!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/auth/login",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "20"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "17"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:04:50 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1761927503"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "201"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c9-0gXqCMS6xhVWDiNxW2qdh99ELGc\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDRkZTFkYWMwZTI3NWNjOWY4NjZmMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzYxOTI2NjkwLCJleHAiOjE3NjE5MzAyOTB9.VfFu7rWSnfl6FWsL0rGf1UsfwGQ_SnnQfJUx-Xi9i7Q\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{USER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/api/v2/users/me",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/api/v2/users/me",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"users",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c4-AcYGkGcc06XZkqwHOJHULVQOG1I\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:09:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6904de1dac0e275cc9f866f2\",\n    \"email\": \"user1@example.com\",\n    \"username\": \"user1\",\n    \"role\": \"user\",\n    \"favorites\": [],\n    \"createdAt\": \"2025-10-31T16:04:45.905Z\",\n    \"updatedAt\": \"2025-10-31T16:04:45.905Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{USER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"nouveau_pseudo\",\r\n  \"favorites\": [\r\n    \"64f9d2c2e7a3f2b1c0a12345\",\r\n    \"64f9d2c2e7a3f2b1c0a67890\"\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/users/me",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"nouveau_pseudo\",\r\n  \"favorites\": [\r\n    \"64f9d2c2e7a3f2b1c0a12345\",\r\n    \"64f9d2c2e7a3f2b1c0a67890\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/users/me",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"users",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"102-Nk9q1Lo4d6H9ZefWSs468AqNAzc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:10:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6904de1dac0e275cc9f866f2\",\n    \"email\": \"user1@example.com\",\n    \"username\": \"nouveau_pseudo\",\n    \"role\": \"user\",\n    \"favorites\": [\n        \"64f9d2c2e7a3f2b1c0a12345\",\n        \"64f9d2c2e7a3f2b1c0a67890\"\n    ],\n    \"createdAt\": \"2025-10-31T16:04:45.905Z\",\n    \"updatedAt\": \"2025-10-31T16:10:22.704Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin1@example.com\",\r\n  \"password\": \"Password123!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/auth/login",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin1@example.com\",\r\n  \"password\": \"Password123!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/auth/login",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "20"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "16"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:11:51 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1761927503"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "203"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cb-xt3f3PJWlgCMdW7wgM6lmgnKVk0\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDRkZjkyYWMwZTI3NWNjOWY4NjZmOCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MTkyNzExMSwiZXhwIjoxNzYxOTMwNzExfQ.3wDfjEJLzoK2_kAGuGS9fECJu3rid3wAtasQ3zjCnUI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/api/v2/users/6904de1dac0e275cc9f866f2",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"6904de1dac0e275cc9f866f2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/api/v2/users/6904de1dac0e275cc9f866f2",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"users",
+								"6904de1dac0e275cc9f866f2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"102-Nk9q1Lo4d6H9ZefWSs468AqNAzc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:13:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6904de1dac0e275cc9f866f2\",\n    \"email\": \"user1@example.com\",\n    \"username\": \"nouveau_pseudo\",\n    \"role\": \"user\",\n    \"favorites\": [\n        \"64f9d2c2e7a3f2b1c0a12345\",\n        \"64f9d2c2e7a3f2b1c0a67890\"\n    ],\n    \"createdAt\": \"2025-10-31T16:04:45.905Z\",\n    \"updatedAt\": \"2025-10-31T16:10:22.704Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/api/v2/movies",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/api/v2/movies",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"movies"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17-uiM8a5GL8CVHAA61oTNSG0IOnOM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:15:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Non trouvé\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Inception\",\r\n  \"genres\": [\"sci-fi\", \"thriller\"],\r\n  \"synopsis\": \"A thief who steals corporate secrets through dream-sharing tech.\",\r\n  \"releaseDate\": \"2010-07-16T00:00:00.000Z\",\r\n  \"durationMin\": 148\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/movies",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Inception\",\r\n  \"genres\": [\"sci-fi\", \"thriller\"],\r\n  \"synopsis\": \"A thief who steals corporate secrets through dream-sharing tech.\",\r\n  \"releaseDate\": \"2010-07-16T00:00:00.000Z\",\r\n  \"durationMin\": 148\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/movies",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"134-6EJNrKLA8fJqYNsMbYxQ5ptkWTE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:22:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Inception\",\n    \"genres\": [\n        \"sci-fi\",\n        \"thriller\"\n    ],\n    \"synopsis\": \"A thief who steals corporate secrets through dream-sharing tech.\",\n    \"releaseDate\": \"2010-07-16T00:00:00.000Z\",\n    \"durationMin\": 148,\n    \"_id\": \"6904e250ac0e275cc9f866fc\",\n    \"createdAt\": \"2025-10-31T16:22:40.351Z\",\n    \"updatedAt\": \"2025-10-31T16:22:40.351Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/api/v2/movies/6904e250ac0e275cc9f866fc",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"movies",
+						"6904e250ac0e275cc9f866fc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/api/v2/movies/6904e250ac0e275cc9f866fc",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"movies",
+								"6904e250ac0e275cc9f866fc"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"134-GzOnzJ/JMz10QLYaozliDUZju4E\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:24:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6904e250ac0e275cc9f866fc\",\n    \"title\": \"Inception\",\n    \"genres\": [\n        \"sci-fi\",\n        \"thriller\"\n    ],\n    \"synopsis\": \"A thief who steals corporate secrets through dream-sharing tech.\",\n    \"releaseDate\": \"2010-07-16T00:00:00.000Z\",\n    \"durationMin\": 148,\n    \"createdAt\": \"2025-10-31T16:22:40.351Z\",\n    \"updatedAt\": \"2025-10-31T16:22:40.351Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"durationMin\": 150 }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/movies/6904e250ac0e275cc9f866fc",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"movies",
+						"6904e250ac0e275cc9f866fc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"durationMin\": 150 }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/movies/6904e250ac0e275cc9f866fc",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"movies",
+								"6904e250ac0e275cc9f866fc"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"134-z3guZHsDGUYs6KLAsLUWxotfZ2U\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:25:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6904e250ac0e275cc9f866fc\",\n    \"title\": \"Inception\",\n    \"genres\": [\n        \"sci-fi\",\n        \"thriller\"\n    ],\n    \"synopsis\": \"A thief who steals corporate secrets through dream-sharing tech.\",\n    \"releaseDate\": \"2010-07-16T00:00:00.000Z\",\n    \"durationMin\": 150,\n    \"createdAt\": \"2025-10-31T16:22:40.351Z\",\n    \"updatedAt\": \"2025-10-31T16:25:40.012Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/movies/6904e250ac0e275cc9f866fc",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"movies",
+						"6904e250ac0e275cc9f866fc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/movies/6904e250ac0e275cc9f866fc",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"movies",
+								"6904e250ac0e275cc9f866fc"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:26:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"The Witcher\",\r\n  \"genres\": [\"fantasy\", \"drama\"],\r\n  \"status\": \"ongoing\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/series",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"series"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"The Witcher\",\r\n  \"genres\": [\"fantasy\", \"drama\"],\r\n  \"status\": \"ongoing\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/series",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"series"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-DDYuUPiHzYienjx2rLlPEAiwgWI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:27:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"The Witcher\",\n    \"genres\": [\n        \"fantasy\",\n        \"drama\"\n    ],\n    \"status\": \"ongoing\",\n    \"_id\": \"6904e382ac0e275cc9f86701\",\n    \"createdAt\": \"2025-10-31T16:27:46.533Z\",\n    \"updatedAt\": \"2025-10-31T16:27:46.533Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"seasonNo\": 1,\r\n  \"episodes\": 8\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"series",
+						"6904e382ac0e275cc9f86701",
+						"seasons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"seasonNo\": 1,\r\n  \"episodes\": 8\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"series",
+								"6904e382ac0e275cc9f86701",
+								"seasons"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b8-CzhcVGvGhmjQhCaqnusq2EyLvo0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:29:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"seriesId\": \"6904e382ac0e275cc9f86701\",\n    \"seasonNo\": 1,\n    \"episodes\": 8,\n    \"_id\": \"6904e3eeac0e275cc9f86703\",\n    \"createdAt\": \"2025-10-31T16:29:34.506Z\",\n    \"updatedAt\": \"2025-10-31T16:29:34.506Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"epNo\": 1,\r\n  \"title\": \"The End’s Beginning\",\r\n  \"durationMin\": 61\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons/6904e3eeac0e275cc9f86703/episodes",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"series",
+						"6904e382ac0e275cc9f86701",
+						"seasons",
+						"6904e3eeac0e275cc9f86703",
+						"episodes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"epNo\": 1,\r\n  \"title\": \"The End’s Beginning\",\r\n  \"durationMin\": 61\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons/6904e3eeac0e275cc9f86703/episodes",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"series",
+								"6904e382ac0e275cc9f86701",
+								"seasons",
+								"6904e3eeac0e275cc9f86703",
+								"episodes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fe-ObOWy8Ii+thseqNqPF8xepwGroI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:30:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"seriesId\": \"6904e382ac0e275cc9f86701\",\n    \"seasonId\": \"6904e3eeac0e275cc9f86703\",\n    \"epNo\": 1,\n    \"title\": \"The End’s Beginning\",\n    \"durationMin\": 61,\n    \"_id\": \"6904e436ac0e275cc9f86705\",\n    \"createdAt\": \"2025-10-31T16:30:46.091Z\",\n    \"updatedAt\": \"2025-10-31T16:30:46.091Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons/6904e3eeac0e275cc9f86703/episodes",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"series",
+						"6904e382ac0e275cc9f86701",
+						"seasons",
+						"6904e3eeac0e275cc9f86703",
+						"episodes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons/6904e3eeac0e275cc9f86703/episodes",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"series",
+								"6904e382ac0e275cc9f86701",
+								"seasons",
+								"6904e3eeac0e275cc9f86703",
+								"episodes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-84a1edxsp+Pb+sCAyiXuLshF1WQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:31:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6904e436ac0e275cc9f86705\",\n        \"seriesId\": \"6904e382ac0e275cc9f86701\",\n        \"seasonId\": \"6904e3eeac0e275cc9f86703\",\n        \"epNo\": 1,\n        \"title\": \"The End’s Beginning\",\n        \"durationMin\": 61,\n        \"createdAt\": \"2025-10-31T16:30:46.091Z\",\n        \"updatedAt\": \"2025-10-31T16:30:46.091Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons/6904e3eeac0e275cc9f86703/episodes?minDuration=60",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"series",
+						"6904e382ac0e275cc9f86701",
+						"seasons",
+						"6904e3eeac0e275cc9f86703",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "minDuration",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/series/6904e382ac0e275cc9f86701/seasons/6904e3eeac0e275cc9f86703/episodes?minDuration=60",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"series",
+								"6904e382ac0e275cc9f86701",
+								"seasons",
+								"6904e3eeac0e275cc9f86703",
+								"episodes"
+							],
+							"query": [
+								{
+									"key": "minDuration",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-84a1edxsp+Pb+sCAyiXuLshF1WQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:32:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6904e436ac0e275cc9f86705\",\n        \"seriesId\": \"6904e382ac0e275cc9f86701\",\n        \"seasonId\": \"6904e3eeac0e275cc9f86703\",\n        \"epNo\": 1,\n        \"title\": \"The End’s Beginning\",\n        \"durationMin\": 61,\n        \"createdAt\": \"2025-10-31T16:30:46.091Z\",\n        \"updatedAt\": \"2025-10-31T16:30:46.091Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ADMIN_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"target\": \"movie\",\r\n  \"targetId\": \"68f43d3b0f97eb23e2847989\",\r\n  \"score\": 8.5,\r\n  \"review\": \"Excellent rythme et réalisation.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/api/v2/ratings",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"ratings"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"target\": \"movie\",\r\n  \"targetId\": \"68f43d3b0f97eb23e2847989\",\r\n  \"score\": 8.5,\r\n  \"review\": \"Excellent rythme et réalisation.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/v2/ratings",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ratings"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:34:43 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1761929384"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "268"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10c-+PcunZLQ+MmAgGcSap2HECqzLVY\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"6904df92ac0e275cc9f866f8\",\n    \"target\": \"movie\",\n    \"targetId\": \"68f43d3b0f97eb23e2847989\",\n    \"score\": 8.5,\n    \"review\": \"Excellent rythme et réalisation.\",\n    \"_id\": \"6904e523ac0e275cc9f86709\",\n    \"createdAt\": \"2025-10-31T16:34:43.282Z\",\n    \"updatedAt\": \"2025-10-31T16:34:43.282Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/api/v2/ratings/avg/movie/68f43d3b0f97eb23e2847989",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"ratings",
+						"avg",
+						"movie",
+						"68f43d3b0f97eb23e2847989"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE}}/api/v2/ratings/avg/movie/68f43d3b0f97eb23e2847989",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ratings",
+								"avg",
+								"movie",
+								"68f43d3b0f97eb23e2847989"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-ICAigr/3hJqH3AggthzewuylaMo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 31 Oct 2025 16:36:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"avg\": 8.5,\n    \"count\": 1\n}"
+				}
+			]
+		}
+	]
+}
