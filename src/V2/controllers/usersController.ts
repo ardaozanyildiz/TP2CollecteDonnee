@@ -1,8 +1,10 @@
+//Ici ya les fonctions pour les users
 import { Request, Response } from 'express'
 import User from '../models/User.js'
 import { userNameContrainte } from '../utils/validators.js'
  
-export async function me(req: Request, res: Response) {
+//Afficher les infos du user
+export async function infosUser(req: Request, res: Response) {
   try {
     const id = (req as any).user?.id
     const user = await User.findById(id).select('-passwordHash')
@@ -12,8 +14,9 @@ export async function me(req: Request, res: Response) {
     return res.status(500).json({ message: 'Server erreur' })
   }
 }
- 
-export async function patchMe(req: Request, res: Response) {
+
+//Modifier des infos
+export async function patchInfosUser(req: Request, res: Response) {
   try {
     const id = (req as any).user?.id
     const { username, favorites } = req.body || {}
@@ -41,6 +44,7 @@ export async function patchMe(req: Request, res: Response) {
   }
 }
  
+//Afficher un user
 export async function getUserById(req: Request, res: Response) {
   try {
     const user = await User.findById(req.params.id).select('-passwordHash')

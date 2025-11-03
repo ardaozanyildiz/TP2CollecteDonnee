@@ -1,3 +1,4 @@
+//Contreoller de authentification
 import { Request, Response } from 'express'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
@@ -6,7 +7,7 @@ import User, { IUser } from '../models/User.js'
 import { emailContrainte, userNameContrainte } from '../utils/validators.js'
 
 const config = configPkg as any
-
+//Verifier si le password est fort
 function isStrongPassword(pw: string): boolean {
     if (typeof pw !== 'string') return false
     return (
@@ -17,7 +18,7 @@ function isStrongPassword(pw: string): boolean {
         /[^A-Za-z0-9]/.test(pw)
     )
 }
-
+//Pour cree un nouveau utilisateur apres avoir valider les donnees
 export async function register(req: Request, res: Response) {
     try {
         const { email, username, password } = req.body || {}
@@ -39,6 +40,7 @@ export async function register(req: Request, res: Response) {
             return res.status(409).json({ message: 'Email deja utiliser' })
         }
 
+        //Juste pour hasher le mdp
         const passwordHash = await bcrypt.hash(password, 10)
         const user = await User.create({ email, username, passwordHash, role: 'user' })
 
@@ -50,7 +52,7 @@ export async function register(req: Request, res: Response) {
         return res.status(500).json({ message: 'Server erreur' })
     }
 }
-
+//Verifier si un utilisateur est la et aussi le retouner un token
 export async function login(req: Request, res: Response) {
     try {
         const { email, password } = req.body || {}

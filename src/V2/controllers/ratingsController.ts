@@ -1,9 +1,10 @@
+//Sert a faire les operation liee au rating
 import { Request, Response } from 'express'
 import mongoose from 'mongoose'
 import Rating from '../models/Rating.js'
 import Episode from '../models/Episode.js'
 
-// Créer une note (target = 'movie' ou 'episode')
+//cree un rating
 export async function createRating(req: Request, res: Response) {
     try {
         const { target, targetId, score, review } = req.body || {}
@@ -21,7 +22,7 @@ export async function createRating(req: Request, res: Response) {
     }
 }
 
-// Moyenne et compteur des notes d’un film
+//Pour calculer la moyenne dun film
 export async function avgMovie(req: Request, res: Response) {
     try {
         const movieId = req.params.movieId
@@ -37,8 +38,7 @@ export async function avgMovie(req: Request, res: Response) {
         return res.status(400).json({ message: 'Bad id' })
     }
 }
-
-// Moyenne et compteur des notes pour une série (en se basant sur les épisodes de la série)
+//Moyenne des serie
 export async function avgSeries(req: Request, res: Response) {
     try {
         const seriesId = req.params.seriesId

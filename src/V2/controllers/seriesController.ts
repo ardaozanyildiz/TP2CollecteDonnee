@@ -1,8 +1,10 @@
+//Ici ya tout les fonctions 
 import { Request, Response } from 'express'
 import Series from '../models/Series.js'
 import Season from '../models/Season.js'
 import Episode from '../models/Episode.js'
 
+//Afficher les series
 export async function listSeries(req: Request, res: Response) {
     try {
         const { title, genre, status } = req.query as Record<string, string>
@@ -18,7 +20,7 @@ export async function listSeries(req: Request, res: Response) {
         return res.status(500).json({ message: 'Server erreur' })
     }
 }
-
+//Cree une series
 export async function createSeries(req: Request, res: Response) {
     try {
         const doc = await Series.create(req.body)
@@ -28,6 +30,7 @@ export async function createSeries(req: Request, res: Response) {
     }
 }
 
+//Cree une saison
 export async function createSeason(req: Request, res: Response) {
     try {
         const { seriesId } = req.params
@@ -39,6 +42,7 @@ export async function createSeason(req: Request, res: Response) {
     }
 }
 
+//Cree un episode
 export async function createEpisode(req: Request, res: Response) {
     try {
         const { seriesId, seasonId } = req.params
@@ -49,7 +53,7 @@ export async function createEpisode(req: Request, res: Response) {
         return res.status(400).json({ message: 'Invalid payload' })
     }
 }
-
+//Afficher les episode dune saison
 export async function listEpisodesInSeason(req: Request, res: Response) {
     try {
         const { seasonId } = req.params

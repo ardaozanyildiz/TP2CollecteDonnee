@@ -1,3 +1,4 @@
+//Pour gerer les films afficher, supprimer, rajouter, edit, etc
 import { Request, Response } from 'express'
 import Movie from '../models/Movie.js'
 

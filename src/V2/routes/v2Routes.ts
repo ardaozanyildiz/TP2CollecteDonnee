@@ -14,8 +14,8 @@ import router from '../../V1/routes/mediaRoutes.js'
 router.post('/auth/register', Auth.register)
 router.post('/auth/login', loginLimiter, Auth.login)
 
-router.get('/users/me', requireAuth, Users.me)
-router.patch('/users/me', requireAuth, Users.patchMe)
+router.get('/users/me', requireAuth, Users.infosUser)
+router.patch('/users/me', requireAuth, Users.patchInfosUser)
 router.get('/users/:id', requireAuth, requireRole('admin'), Users.getUserById)
 
 //Ici cest les routes crud pour les film
