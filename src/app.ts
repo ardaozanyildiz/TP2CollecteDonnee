@@ -1,6 +1,5 @@
 //Organise les affaires avant le lancement du serveurs
 import express from 'express'
-import morgan from 'morgan'
 import configPkg from 'config'
 import swaggerUi from 'swagger-ui-express'
 import { connectDb } from './db/connection.js'
@@ -13,11 +12,10 @@ import path from 'path'
 const config = configPkg as any
 const app = express()
 
-//Des configurations de bases
+
 //Permettre de lire json, afficher les requetes http,etc et aussi connecter la bd
 app.set('trust proxy', !!config.get('server.trustProxy'))
 app.use(express.json())
-app.use(morgan('dev'))
 permissionCors(app)
 connectDb(config.get('db.uri'))
 
