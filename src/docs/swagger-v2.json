@@ -1,107 +1,303 @@
 {
-    "openapi": "3.0.0",
+    "openapi": "3.0.3",
     "info": {
-        "title": "Media API v2",
-        "version": "2.0.0"
+      "title": "API Média - Version 2",
+      "version": "2.0.0",
+      "description": "Documentation de l’API Média (Films, Séries, Utilisateurs, Authentification, Ratings).<br><br> Utilisez **/auth/register** et **/auth/login** pour obtenir un token JWT, puis cliquez sur le bouton **Authorize ** et entrez `Bearer VOTRE_TOKEN`."
     },
     "servers": [
-        {
-            "url": "/api/v2"
-        }
+      {
+        "url": "http://localhost:3000/api/v2",
+        "description": "Serveur local"
+      }
     ],
-    "components": {
-        "securitySchemes": {
-            "bearerAuth": {
-                "type": "http",
-                "scheme": "bearer"
-            }
-        },
-        "schemas": {
-            "RegisterBody": {
-                "type": "object",
-                "required": [
-                    "email",
-                    "username",
-                    "password"
-                ],
-                "properties": {
-                    "email": {
-                        "type": "string",
-                        "format": "email"
-                    },
-                    "username": {
-                        "type": "string"
-                    },
-                    "password": {
-                        "type": "string"
-                    }
-                }
-            }
-        }
-    },
+    "tags": [
+      { "name": "Authentification", "description": "Inscription et connexion des utilisateurs" },
+      { "name": "Utilisateurs", "description": "Gestion du profil et des utilisateurs (admin)" },
+      { "name": "Films", "description": "CRUD pour les films " },
+      { "name": "Séries", "description": "CRUD pour les séries, saisons et épisodes " },
+      { "name": "Notes", "description": "Création et consultation des notes " }
+    ],
     "paths": {
-        "/auth/register": {
-            "post": {
-                "summary": "Register",
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RegisterBody"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Created"
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    },
-                    "409": {
-                        "description": "Conflict"
-                    }
+      "/auth/register": {
+        "post": {
+          "tags": ["Authentification"],
+          "summary": "Inscription d’un utilisateur",
+          "description": "Créer un nouveau compte utilisateur (ou admin en précisant `role: 'admin'`).",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["email", "username", "password"],
+                  "properties": {
+                    "email": { "type": "string", "example": "user@test.com" },
+                    "username": { "type": "string", "example": "monUser" },
+                    "password": { "type": "string", "example": "Test@1234" },
+                    "role": { "type": "string", "enum": ["user", "admin"], "example": "user" }
+                  }
                 }
+              }
             }
-        },
-        "/auth/login": {
-            "post": {
-                "summary": "Login",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    }
-                }
-            }
-        },
-        "/users/me": {
-            "get": {
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "/movies": {
-            "get": {
-                "summary": "List movies",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
+          },
+          "responses": {
+            "201": { "description": "Utilisateur créé avec succès" },
+            "400": { "description": "Email, username ou mot de passe invalide" },
+            "409": { "description": "Email déjà utilisé" }
+          }
         }
+      },
+      "/auth/login": {
+        "post": {
+          "tags": ["Authentification"],
+          "summary": "Connexion d’un utilisateur",
+          "description": "Retourne un token JWT à utiliser pour les routes protégées.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["email", "password"],
+                  "properties": {
+                    "email": { "type": "string", "example": "user@test.com" },
+                    "password": { "type": "string", "example": "Test@1234" }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Connexion réussie",
+              "content": {
+                "application/json": {
+                  "example": { "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp..." }
+                }
+              }
+            },
+            "401": { "description": "Identifiants invalides" }
+          }
+        }
+      },
+      "/users/me": {
+        "get": {
+          "tags": ["Utilisateurs"],
+          "summary": "Obtenir ses informations",
+          "security": [{ "bearerAuth": [] }],
+          "responses": {
+            "200": { "description": "Informations du profil utilisateur" },
+            "401": { "description": "Non autorisé" }
+          }
+        },
+        "patch": {
+          "tags": ["Utilisateurs"],
+          "summary": "Modifier ses informations",
+          "security": [{ "bearerAuth": [] }],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": { "username": "nouveauNom", "name": "Jean Dupont" }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": { "description": "Profil mis à jour" },
+            "401": { "description": "Non autorisé" }
+          }
+        }
+      },
+      "/movies": {
+        "get": { "tags": ["Films"], "summary": "Lister tous les films" },
+        "post": {
+          "tags": ["Films"],
+          "summary": "Créer un film (admin)",
+          "security": [{ "bearerAuth": [] }],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": {
+                    "title": "Inception",
+                    "genres": ["Sci-Fi"],
+                    "durationMin": 148,
+                    "synopsis": "Un rêve dans un rêve."
+                  }
+                }
+              }
+            }
+          },
+          "responses": { "201": { "description": "Film créé" }, "403": { "description": "Admin requis" } }
+        }
+      },
+      "/movies/{id}": {
+        "get": {
+          "tags": ["Films"],
+          "summary": "Obtenir les détails d’un film",
+          "parameters": [
+            { "name": "id", "in": "path", "required": true, "schema": { "type": "string" }, "description": "ID du film à récupérer" }
+          ],
+          "responses": { "200": { "description": "Film trouvé" } }
+        },
+        "patch": {
+          "tags": ["Films"],
+          "summary": "Modifier un film (admin)",
+          "security": [{ "bearerAuth": [] }],
+          "parameters": [
+            { "name": "id", "in": "path", "required": true, "schema": { "type": "string" }, "description": "ID du film à modifier" }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": { "title": "Inception Modifié", "synopsis": "Synopsis mis à jour." }
+                }
+              }
+            }
+          },
+          "responses": { "200": { "description": "Film mis à jour" } }
+        },
+        "delete": {
+          "tags": ["Films"],
+          "summary": "Supprimer un film (admin)",
+          "security": [{ "bearerAuth": [] }],
+          "parameters": [
+            { "name": "id", "in": "path", "required": true, "schema": { "type": "string" }, "description": "ID du film à supprimer" }
+          ],
+          "responses": { "200": { "description": "Film supprimé" } }
+        }
+      },
+  
+      "/series": {
+        "get": {
+          "tags": ["Séries"],
+          "summary": "Lister toutes les séries",
+          "responses": {
+            "200": { "description": "Liste des séries" }
+          }
+        },
+        "post": {
+          "tags": ["Séries"],
+          "summary": "Créer une série (admin)",
+          "security": [{ "bearerAuth": [] }],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": { "title": "Breaking Bad", "genres": ["Crime"], "year": 2008 }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": { "description": "Série créée avec succès" },
+            "403": { "description": "Admin requis" }
+          }
+        }
+      },
+      "/series/{seriesId}/seasons": {
+        "post": {
+          "tags": ["Séries"],
+          "summary": "Ajouter une saison à une série (admin)",
+          "security": [{ "bearerAuth": [] }],
+          "parameters": [
+            { "name": "seriesId", "in": "path", "required": true, "schema": { "type": "string" }, "description": "ID de la série" }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": { "seasonNumber": 1, "year": 2008 }
+                }
+              }
+            }
+          },
+          "responses": { "201": { "description": "Saison ajoutée à la série" } }
+        }
+      },
+      "/series/{seriesId}/seasons/{seasonId}/episodes": {
+        "post": {
+          "tags": ["Séries"],
+          "summary": "Ajouter un épisode à une saison (admin)",
+          "security": [{ "bearerAuth": [] }],
+          "parameters": [
+            { "name": "seriesId", "in": "path", "required": true, "schema": { "type": "string" } },
+            { "name": "seasonId", "in": "path", "required": true, "schema": { "type": "string" } }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": { "title": "Episode 1", "duration": "45 min", "synopsis": "Premier épisode de la série" }
+                }
+              }
+            }
+          },
+          "responses": { "201": { "description": "Épisode ajouté avec succès" } }
+        },
+        "get": {
+          "tags": ["Séries"],
+          "summary": "Lister les épisodes d’une saison",
+          "parameters": [
+            { "name": "seriesId", "in": "path", "required": true, "schema": { "type": "string" } },
+            { "name": "seasonId", "in": "path", "required": true, "schema": { "type": "string" } }
+          ],
+          "responses": { "200": { "description": "Liste des épisodes de la saison" } }
+        }
+      },
+  
+      "/ratings": {
+        "post": {
+          "tags": ["Notes"],
+          "summary": "Donner une note à un film ou une série",
+          "security": [{ "bearerAuth": [] }],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": { "mediaType": "movie", "mediaId": "652ecf...", "rating": 4.5 }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/ratings/avg/movie/{movieId}": {
+        "get": {
+          "tags": ["Notes"],
+          "summary": "Afficher la note moyenne d’un film",
+          "parameters": [
+            { "name": "movieId", "in": "path", "required": true, "schema": { "type": "string" } }
+          ]
+        }
+      },
+      "/ratings/avg/series/{seriesId}": {
+        "get": {
+          "tags": ["Notes"],
+          "summary": "Afficher la note moyenne d’une série",
+          "parameters": [
+            { "name": "seriesId", "in": "path", "required": true, "schema": { "type": "string" } }
+          ]
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "JWT" }
+      }
     }
-}
+  }
+  
